@@ -11,5 +11,6 @@ router.get("/getdataabsen",controler.getdataabsen)
 router.post("/login",controler.loginuser)
 router.post("/registrasi",controler.registrasi)
 router.get("/getuserall",controler.getuserall)
+router.post("/deleteuser/:id",controler.deleteuser)
 
 module.exports=router;

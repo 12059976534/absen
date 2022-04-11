@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     UserId:DataTypes.INTEGER
   }, {});
   Absen.associate = function(models) {
-    Absen.belongsTo(models.User,{foreignKey: 'UserId', as: 'user'})  
+    Absen.belongsTo(models.User,{foreignKey: 'UserId', as: 'user',onDelete: 'CASCADE'})  
   };
   return Absen;
 };

@@ -165,6 +165,23 @@ controler.registrasi = async (req,res,next)=>{
 }
 
 
+controler.deleteuser = async (req,res,next)=>{
+    try {
+       const deleteuser = await db.User.destroy({
+          where:{
+              id:req.params.id
+          }
+       })
+       res.status(200).json({
+        message:"delete succes",
+        data:deleteuser
+    })
+    } catch (error) {
+        next(error)
+    }
+}
+
+
 
 
 
